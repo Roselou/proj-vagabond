@@ -7,7 +7,11 @@ root to: 'users#index'
 	resources :cities do
 		resources :posts
 	end
+	get '/login', to: 'sessions#new'
+	post '/sessions', to: 'sessions#create'
+
 end
+
 #
 # Prefix Verb   URI Pattern                                               Controller#Action
 #                      root GET    /                                      users#index
