@@ -4,12 +4,15 @@
  <h3> Name: <%= @user.name %></h3>
 </div>
 <div>
- <h4> Date Joined: <%= @user.created_at %> 
+ <h3> Username: <%= @user.username %></h3>
+</div>
+<div>
+ <h4> Date Joined: <%= @user.created_at %>
  </h4>
 </div>
 <div>
  <h4> Current City: <%= @user.current_city %></h4>
 </div>
-<div> 
-	<!--<%= link_to #{}"#{@post.title}" %> -->
-<%= link_to "Edit Profile", user_path %>
+<div>
+<%= link_to "Edit Profile", edit_user_path %>
+</div>

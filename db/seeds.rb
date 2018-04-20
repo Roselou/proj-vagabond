@@ -16,14 +16,16 @@ User.create ([{
   avatar: "http://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12231654/Keeshond-MP.jpg",
   current_city: "San Francisco",
   email: "stella@ga.co",
-  username: "stella1"
+  username: "stella1",
+  password: "stella"
 },
 {
   name: "Teako",
   avatar: "https://cdn.working-dog.net/static/images/race/33.jpg?v=4",
   current_city: "Boston",
   email: "teako@ga.co",
-  username: "teakotime"
+  username: "teakotime",
+  password: "stella"
 }])
 p "creating cities"
 City.create ([{
