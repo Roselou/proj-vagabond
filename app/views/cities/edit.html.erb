@@ -1,0 +1,8 @@
+<h1>Edit cities</h1>
+
+<%= form_for @city do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :image %>
+  <%= f.submit "Save" %>
+  <% button_to "Delete", @city, method: :delete %>
+<% end %>
