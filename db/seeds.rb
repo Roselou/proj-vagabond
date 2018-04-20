@@ -11,7 +11,7 @@ Post.destroy_all
 p "destroyed users, cities and posts"
 
 p "creating users"
-User.create ({
+User.create ([{
   name: "Stella",
   avatar: "http://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12231654/Keeshond-MP.jpg",
   current_city: "San Francisco",
@@ -24,22 +24,22 @@ User.create ({
   current_city: "Boston",
   email: "teako@ga.co",
   username: "teakotime"
-})
+}])
 p "creating cities"
-City.create ({
+City.create ([{
   name: "San Francisco",
   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVjfUT8CpHJlSxkTjwM1Jcr53Sqs75Q9-xkV3K149iDDgLMW6"
 },
   {
     name: "Boston",
     image: "https://taj.tajhotels.com/content/dam/luxury/hotels/Taj_Boston/images/16x7/Boston_Harbor.jpg"
-    })
+  }])
 p "creating posts"
-Post.create ({
+Post.create ([{
   title: "Trip 1",
   body: "Wicked pissah dolor sit amet, consectetur adipisicing elit. Hoodsie ornare nisi donatum vulputate jimmies sagittae vitae scrod. Elementum splendide you's guys, amet ovah heah tempor libris consectetur. Donec Fenway Park tristique pro kid id Glawstah. Complenti Cambridgeport natoque tincidunt. Dunkies sollicitudin tincidunt adipiscing tortor TD Gahden clicker elit aliquet. Id Southie vis bang a left Park Street consectetur. Dicant Red Line option, ipsum a donec. Fenway Park Slummerville Sox postea eget."
 },
 {
   title: "Trip 2",
   body: "Arnold Schwarzenegger overthrowing technology companies uber the resistance tourists Lyft venture capital? Free museums tech techie music Bay Bridge liberal media boho stand-up comedy! Yoga pants hypoallergenic dog the cloud fog Planned Parenthood food cart maternal heights.."
-})
+}])

@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
-  def index
-    render :index
-  end
+  protect_from_forgery with: :exception
+
+  include SessionsHelper
+
+  # def index
+  #   render :index
+  # end
 end

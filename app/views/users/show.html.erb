@@ -1,3 +1,13 @@
+
+
 <div>
-  Welcome, <%= @user.first_name %>!
+ <h3> Name: <%= @user.name %></h3>
 </div>
+<div>
+ <h4> Date Joined: <%= @user.created_at %> 
+ </h4>
+</div>
+<div>
+ <h4> Current City: <%= @user.current_city %></h4>
+</div>
+<%= link_to "Edit Profile", user_path %>
