@@ -11,13 +11,6 @@
 
   <body>
     <h1> VAGABOND </h1>
-    <nav> 
-      <div>
-      <%= link_to "Profile", current_user %>
-      </div>
-      <div> <%= link_to "Logout", logout_path %>
-      </div>
-    </nav>
 
     <% flash.each do |name, msg| %>
       <p>
