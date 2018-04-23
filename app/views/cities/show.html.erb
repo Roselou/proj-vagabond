@@ -8,3 +8,14 @@
 <div>
 <%= link_to "Edit City", edit_city_path %>
 </div>
+
+<div>
+	<% @post.each do |post| %>
+		<%= link_to post.title, city_post_path(@city.id, post.id) %> 
+	<% end %> 
+</div>
+
+<div> 
+
+	<%= link_to "New Post", new_city_post_path(@city.id) %>
+</div>

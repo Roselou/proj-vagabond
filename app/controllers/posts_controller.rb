@@ -1,18 +1,29 @@
 class PostsController < ApplicationController
 		def index
 			@user = User.find(params[:user_id])
-	    @cities = @user.cities
+		    @cities = @user.cities
 		end
+
 		def new
+			@city = City.find_by_id(params[:city_id])
 			@post = Post.new
 		end
+
 		def create
-				@post = Post.create(post_params)
-				redirect_to user_post_path(@post.id)
+			@user = current_user
+			@post = City.find_by_id(params[:city_id])
+				.posts
+				.new(post_params)
+
+			@post.user_id = @user.id
+			@post.save
+
+			redirect_to user_path(@user.id)
+
 		end
 
 		def show
-				@post = Post.find_by_id(params[:id])
+			@post = Post.find_by_id(params[:id])
 		end
 
 		def edit

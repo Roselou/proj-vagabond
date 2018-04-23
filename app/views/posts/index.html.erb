@@ -1,7 +1,7 @@
 <div><%= @user.name %> has posted the following</div>
 
 <ul>
-  <% @cities.each do |lib| %>
-    <li><%= lib.title %></li>
+  <% @cities.each do |post| %>
+    <li><%= post.posts.title %></li>
   <% end %>
 </ul>

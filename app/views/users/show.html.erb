@@ -17,9 +17,11 @@
  <h4> Avatar: <img src="<%= @user.avatar %>"</h4>
 </div>
 <div>
-<%= link_to "Edit Profile", edit_user_path %>
+<%= link_to "Edit Profile", edit_user_path%>
 </div>
 
 <div>
-  
+	<% @posts.each do |post| %>
+		<%= link_to post.title, user_post_path(@user.id, post.id) %> 
+	<% end %> 
 </div>
