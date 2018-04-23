@@ -45,3 +45,11 @@ Post.create ([{
   title: "Trip 2",
   body: "Arnold Schwarzenegger overthrowing technology companies uber the resistance tourists Lyft venture capital? Free museums tech techie music Bay Bridge liberal media boho stand-up comedy! Yoga pants hypoallergenic dog the cloud fog Planned Parenthood food cart maternal heights.."
 }])
+Teako = User.create(name: "Teako")
+Stella = User.create(name: "Stella")
+Boston = City.create(name: "Boston")
+trip_1 = Post.create(title: "Trip 1")
+
+Teako.cities << Boston
+Stella.cities << Boston
+Boston.posts << trip_1

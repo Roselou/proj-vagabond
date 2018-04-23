@@ -7,6 +7,7 @@ root to: 'users#index'
 	resources :cities do
 		resources :posts
 	end
+
 	get '/login', to: 'sessions#new'
 	post '/sessions', to: 'sessions#create'
 	get '/logout', to: 'sessions#destroy'
