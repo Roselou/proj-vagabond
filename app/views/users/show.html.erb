@@ -1,27 +1,19 @@
-
-
-<div>
- <h3> Name: <%= @user.name %></h3>
-</div>
-<div>
- <h3> Username: <%= @user.username %></h3>
-</div>
-<div>
- <h4> Date Joined: <%= @user.created_at.strftime("%l:%M%P on %B %d, %Y") %>
- </h4>
-</div>
-<div>
- <h4> Current City: <%= @user.current_city %></h4>
-</div>
-<div>
- <h4> Avatar: <img src="<%= @user.avatar %>"</h4>
-</div>
-<div>
-<%= link_to "Edit Profile", edit_user_path%>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="<%= @user.avatar %>" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-text">Name: <%= @user.name %></h4>
+    <h4 class="card-text">Username: <%= @user.username %></h4>
+    <h5 class="card-text">Current City: <%= @user.current_city %></h5>
+    <h6 class="card-text">Date Joined: <%= @user.created_at.strftime("%l:%M%P on %B %d, %Y") %></h6>
+  </div>
+   <div class="card-body">
+    <a class="card-link"><%= link_to "Edit Profile", edit_user_path%></a>
+  </div>
 </div>
 
-<div>
+<div class = "userposts list-group list-group-flush">
 	<% @posts.each do |post| %>
 		<%= link_to post.title, user_post_path(@user.id, post.id)%> 
 	<% end %>
 </div>
+

@@ -1,11 +1,24 @@
-Edit users
-
-<%= form_for @user do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_field :username %>
-  <%= f.text_field :password %>
-  <%= f.text_field :current_city %>
-  <%= f.text_field :email %>
-  <%= f.text_field :avatar %>
-  <%= f.submit "Save" %>
-<% end %>
+<h1>Edit User</h1>
+<div>
+	<%= form_for @user do |f| %>
+	  <%= f.text_field :name, placeholder: "Enter Name", class: "form-group" %>
+	  <div>
+	  <%= f.text_field :username, placeholder: "Enter Username", class: "form-group"  %>
+	</div>
+	<div>
+	  <%= f.text_field :password, placeholder: "Enter new password", class: "form-group" %>
+	</div>
+	<div>
+	  <%= f.text_field :current_city, placeholder: "Enter Current City", class: "form-group"  %>
+	</div>
+	<div>
+	  <%= f.text_field :email, placeholder: "Enter Email", class: "form-group"  %>
+	</div>
+	<div>
+	  <%= f.text_field :avatar, placeholder: "Enter image link for avatar",class: "form-group" %>
+	</div>
+	<div>
+	  <%= f.submit "Save", class: "btn btn-dark" %> 
+	</div>
+	<% end %>
+</div>

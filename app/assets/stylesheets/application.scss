@@ -1,26 +1,56 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= @import "bootstrap"
- */
+h1, h2, h3, h4 {
+  font-family:'Quicksand', sans-serif;
+  text-decoration: none;
+  color: #000000;
+}
 
- html {
-    position: relative;
-    min-height: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  body {
-    /* Margin bottom by footer height */
-    margin-bottom: 100px;
-    padding: 0;
-  }
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 8em;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+nav {
+  text-decoration: none;
+  color: #FFFFFF;
+
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.card {
+  display:inline-block;
+  margin: 0 auto;
+
+}
+
+.userposts {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3em;
+}
+
+.cityposts {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3em;
+}
+
+a:hover { 
+  color: #FFFFFF;
+  text-decoration: none;
+
+ }
+
+
+@import "bootstrap"
+
