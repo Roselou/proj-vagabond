@@ -2,7 +2,8 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
-
+		@city = City.find_by_id(params[:id])
+		@cities = City.all
 	end
 	def new
 		@users = User.new

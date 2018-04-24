@@ -15,3 +15,5 @@
 	<% @posts.each do |post| %>
 		<%= link_to post.title, user_post_path(@user.id, post.id)%>
 	<% end %>
+
+<%= link_to "Return to home", root_path %>

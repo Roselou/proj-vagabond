@@ -16,7 +16,7 @@ User.create ([{
   avatar: "http://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12231654/Keeshond-MP.jpg",
   current_city: "San Francisco",
   email: "stella@ga.co",
-  username: "stella1",
+  username: "stella",
   password: "stella"
 },
 {
@@ -30,12 +30,20 @@ User.create ([{
 p "creating cities"
 City.create ([{
   name: "San Francisco",
-  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVjfUT8CpHJlSxkTjwM1Jcr53Sqs75Q9-xkV3K149iDDgLMW6"
+  image: "app/assets/images/sf.png"
 },
-  {
-    name: "Boston",
-    image: "https://taj.tajhotels.com/content/dam/luxury/hotels/Taj_Boston/images/16x7/Boston_Harbor.jpg"
-  }])
+{
+  name: "Boston",
+  image: "app/assets/images/boston.png"
+},
+{
+  name: "Gibraltar",
+  image: "app/assets/images/gibraltar.png"
+},
+{
+  name: "London",
+  image: "app/assets/images/london.png"
+}])
 p "creating posts"
 Post.create ([{
   title: "Trip 1",
