@@ -1,8 +1,9 @@
 <h1>Edit posts</h1>
 
-<%= form_for @city do |f| %>
+<%= form_for ([@city, @post]) do |f| %>
   <%= f.text_field :title, placeholder: "Post Title" %>
   <%= f.text_area :body, placeholder: "Post Body" %>
   <%= f.submit "Save" %>
-  <% button_to "Delete", @post, method: :delete %>
+  <%= button_to "Delete", [@city, @post], method: :delete %>
 <% end %>
+

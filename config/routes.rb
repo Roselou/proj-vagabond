@@ -5,7 +5,7 @@ root to: 'users#index'
 		resources :posts
 	end
 	resources :cities do
-		resources :posts, only: [:new, :create, :index, :show, :delete]
+		resources :posts
 	end
 
 	get '/login', to: 'sessions#new'
