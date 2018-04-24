@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :cities, through: :posts
 
+  
+
   has_secure_password
 
   def create
@@ -21,3 +23,5 @@ class User < ApplicationRecord
     @user ? @user.authenticate(params[:password]) : false
   end
 end
+
+ 

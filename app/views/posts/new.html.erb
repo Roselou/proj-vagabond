@@ -2,10 +2,9 @@
 
 <div>
 <%= form_for ([@city, @post]) do |f| %>
-  <%= f.text_field :title, placeholder: "Post Title" %>
+  <%= f.text_field :title, placeholder: "Post Title", {:maxlength => 15} %>
   <%= f.text_area :body, placeholder: "Post Body" %>
   <%= f.submit "Save" %>
 <% end %>
 </div>
 
-<%= @post.id %>

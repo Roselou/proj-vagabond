@@ -2,6 +2,6 @@
 
 <div class = "userposts list-group list-group-flush">
 	<% @cities.each do |city| %> 
-		<%= link_to city.name, cities_path(:city_id) %>
+		<%= link_to city.name, city_path(city) %>
 	<% end %> 
 </div>

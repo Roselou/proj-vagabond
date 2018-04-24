@@ -17,9 +17,10 @@ class PostsController < ApplicationController
 				.new(post_params)
 
 			@post.user_id = @user
-			@post.save
-
-			redirect_to user_path(@user)
+			if @post.save
+				flash[:notice] = "Successfully saved post"
+				redirect_to user_path(@user)
+			end
 
 		end
 
@@ -49,7 +50,8 @@ class PostsController < ApplicationController
 			@user = current_user
 			post_id = params[:id]
 			post = Post.find_by_id(post_id)
-			post.destroy
+			if post.destroy
+				flash[:alert] = "Successfully deleted post"
 			redirect_to user_path(@user)
 		end
 

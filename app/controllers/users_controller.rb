@@ -2,15 +2,24 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
+
 	end
 	def new
 		@users = User.new
+
 	end
 
 	def create
 	    @user = User.create(user_params)
-	    login(@user)
-	    redirect_to @user
+	    if @user.save
+	        flash[:notice] = ""
+	    	login(@user)
+	    	redirect_to @user
+	    else
+	      puts "Email already taken" * 100
+	      flash[:error] = "Email already taken"
+	      redirect_to new_user_path
+		end
 	end
 
 	def show
