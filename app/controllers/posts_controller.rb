@@ -53,6 +53,7 @@ class PostsController < ApplicationController
 			if post.destroy
 				flash[:alert] = "Successfully deleted post"
 			redirect_to user_path(@user)
+			end
 		end
 
 	private
