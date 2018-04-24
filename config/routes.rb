@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 root to: 'users#index'
 
+	 delete '/cities/:city_id/posts/:id', to: 'posts#destroy', as: 'destroy_post'
+
 	resources :users do
 		resources :posts
 	end

@@ -47,7 +47,7 @@ class PostsController < ApplicationController
 			post_id = params[:id]
 			post = Post.find_by_id(post_id)
 			post.destroy
-			redirect_to city_path
+			redirect_to city_path(params[:city_id])
 		end
 
 	private

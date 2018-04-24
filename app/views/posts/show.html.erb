@@ -6,4 +6,4 @@
 
 
 <%= link_to "Edit Post", edit_city_post_path(@city.id, @post) %>
-
+<%= button_to "Delete", destroy_post_path(@city.id, @post), method: :delete %>
