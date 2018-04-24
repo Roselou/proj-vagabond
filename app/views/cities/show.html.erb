@@ -1,10 +1,10 @@
 <div class="card bg-dark text-white">
-  <img class="card-img" src="<%= @city.image %>" alt="Card image">
+  <%= image_tag("nny.png") %> 
   <div class="card-img">
-    <h1 class="card-title"><%= @city.name %></h1>
+    <h1 class="card-title"> <%= @city.name %></h1>
 </div>
 
-<div>
+<div>	
 	<h3 >
 	<%= link_to "Edit City", edit_city_path%>
 	</h3>
