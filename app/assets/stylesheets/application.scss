@@ -14,11 +14,16 @@ p {
   font-family: 'Raleway', sans-serif;
 }
 
-nav {
+nav a {
   text-decoration: none;
   color: #FFFFFF;
 
 }
+
+a {
+  color: #FFFFFF;
+}
+
 
 form {
   margin: 0 auto;
@@ -45,7 +50,7 @@ form {
   padding-top: 3em;
 }
 
-a:hover { 
+a:hover {
   color: #FFFFFF;
   text-decoration: none;
 
@@ -53,4 +58,3 @@ a:hover {
 
 
 @import "bootstrap"
-

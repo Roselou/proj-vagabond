@@ -11,9 +11,7 @@
   </div>
 </div>
 
-<div class = "userposts list-group list-group-flush">
-	<% @posts.each do |post| %>
-		<%= link_to post.title, user_post_path(@user.id, post.id)%> 
-	<% end %>
-</div>
 
+	<% @posts.each do |post| %>
+		<%= link_to post.title, user_post_path(@user.id, post.id)%>
+	<% end %>

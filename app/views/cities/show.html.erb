@@ -1,6 +1,6 @@
 <div class="card bg-dark text-white">
   <img class="card-img" src="<%= @city.image %>" alt="Card image">
-  <div class="card-img-overlay">
+  <div class="card-img">
     <h1 class="card-title"><%= @city.name %></h1>
 </div>
 
@@ -12,16 +12,16 @@
 
 <div class="cityposts">
 	<h3>
-	
+
 		<% @post.each do |post| %>
-			<%= link_to post.title, city_post_path(@city.id, post.id) %> 
-			
-		<% end %> 
-		
+			<%= link_to post.title, city_post_path(@city.id, post.id) %>
+
+		<% end %>
+
 	</h3>
 </div>
 
-<div class='newpost'> 
+<div class='newpost'>
 	<h3>
 		<%= link_to "New Post", new_city_post_path(@city.id) %>
 	</h3>

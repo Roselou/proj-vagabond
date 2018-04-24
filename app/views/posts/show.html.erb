@@ -5,5 +5,5 @@
 <p>Body: <%= @post.body %></p>
 
 
-<%= link_to "Edit Post", edit_city_post_path(@city.id, @post) %>
-<%= button_to "Delete", destroy_post_path(@city.id, @post), method: :delete %>
+<%= link_to "Edit Post", edit_city_post_path(@user.id, @post) %>
+<%= button_to "Delete", destroy_post_path(@user.id, @post), method: :delete %>
